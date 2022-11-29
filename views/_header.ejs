@@ -1,1 +1,27 @@
-<header>Page header</header>
+<header>
+  <nav class="nav-container">
+    <span id="site-title"
+      ><a style="text-decoration: none; color: white" href="/"
+        >Authentication</a
+      ></span
+    >
+
+    <ul class="auth">
+      <% if(locals.user){ %>
+
+      <li>
+        <a href="#"><%= user.name %></a>
+      </li>
+      <li>
+        <a href="/users/sign-out">Logout</a>
+      </li>
+
+      <% }else{ %>
+
+      <li><a href="/users/sign-in">Sign In</a></li>
+      <li><a href="/users/sign-up">Sign Up</a></li>
+
+      <% }%>
+    </ul>
+  </nav>
+</header>

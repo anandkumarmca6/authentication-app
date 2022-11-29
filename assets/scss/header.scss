@@ -1,0 +1,23 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #2a2747;
+
+  #site-title {
+    color: white;
+    font-weight: 600;
+  }
+  .auth {
+    display: inline-flex;
+    list-style-type: none;
+
+    li {
+      padding: 0.3rem;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

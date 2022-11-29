@@ -1,0 +1,16 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #2a2747; }
+  .nav-container #site-title {
+    color: white;
+    font-weight: 600; }
+  .nav-container .auth {
+    display: inline-flex;
+    list-style-type: none; }
+    .nav-container .auth li {
+      padding: 0.3rem; }
+    .nav-container .auth a {
+      color: white;
+      text-decoration: none; }
