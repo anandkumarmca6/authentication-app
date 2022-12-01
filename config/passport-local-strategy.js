@@ -10,12 +10,17 @@ passport.use(
     },
     function (req, email, password, done) {
       // find a user and establish a identity
-      User.findOne({ email: email }, function (err, user) {
+      User.findOne({ email: email }, async function (err, user) {
         if (err) {
           req.flash('error', err);
           return done(err);
         }
-        if (!user || user.password != password) {
+        if (!user) {
+          req.flash('error', 'Invalid Username/Password');
+          return done(null, false);
+        }
+        const isMatch = await user.matchPassword(password);
+        if (!isMatch) {
           req.flash('error', 'Invalid Username/Password');
           return done(null, false);
         }
