@@ -11,7 +11,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/header.css" />
 
@@ -40,7 +40,7 @@
           text: '<%= flash.error %>',
           type:'error',
           layout:'topRight',
-          timeout : 1500
+          timeout : 1000
         }).show();
       <% } %>
     </script>

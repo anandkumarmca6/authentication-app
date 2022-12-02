@@ -1,6 +1,6 @@
 const express = require('express');
 const passport = require('passport');
-
+const fetch = require('isomorphic-fetch');
 const router = express.Router();
 const usersController = require('../controllers/users_controller');
 
@@ -13,6 +13,7 @@ router.post(
   passport.authenticate('local', { failureRedirect: '/users/sign-in' }),
   usersController.createSession
 );
+
 router.get('/sign-out', usersController.destroySession);
 router.get(
   '/auth/google',
