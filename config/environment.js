@@ -1,6 +1,6 @@
 const development = {
   name: 'development',
-  asset_path: '/assets',
+  asset_path: 'assets',
   session_cookie_key: '@1925',
   port: 6564,
   clientID: 'demo',
