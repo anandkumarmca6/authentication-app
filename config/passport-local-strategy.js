@@ -1,3 +1,4 @@
+const { response } = require('express');
 const passport = require('passport');
 const User = require('../models/users');
 const LocalStrategy = require('passport-local').Strategy;
@@ -11,9 +12,10 @@ passport.use(
     function (req, email, password, done) {
       // getting site key from client side
       const response_key = req.body['g-recaptcha-response'];
+      // google as a response
       if (response_key == '') {
         req.flash('error', 'Captcha not selected');
-        return done(null, false);
+        return req.res.redirect('/users/sign-in');
       }
       // Put secret key here, which we get from google console
       const secret_key = '6Le4S0sjAAAAAPzQ6f3N1CIkwBSvz-Zzy8yU-1wA';
@@ -29,17 +31,17 @@ passport.use(
         .then((response) => response.json())
         .then((google_response) => {
           // google_response is the object return by
-          // google as a response
+
           if (google_response.success != true) {
             //   if captcha is not verified
             req.flash('error', error);
-            return done(null, false);
+            return req.res.redirect('/users/sign-in');
           }
         })
         .catch((error) => {
           // Some error while verify captcha
           req.flash('error', error);
-          return done(null, false);
+          return req.res.redirect('/users/sign-in');
         });
       // find a user and establish a identity
       User.findOne({ email: email }, async function (err, user) {

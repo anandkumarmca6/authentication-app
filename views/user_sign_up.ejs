@@ -1,24 +1,63 @@
-<h1>Sign Up</h1>
-<form action="/users/create" method="post">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <input
-    type="password"
-    name="confirm_password"
-    placeholder="Confirm Password"
-    required
-  />
-  <br /><br />
-  <div
-    class="g-recaptcha"
-    style="margin-left: 50px"
-    data-sitekey="6Le4S0sjAAAAAC_2tL_Jx2lLFFjQAybuyljOscv5"
-  ></div>
-  <br />
-  <input type="submit" value="Sign Up" />
-</form>
-
-<p>
-  <a href="/users/auth/google">Google Sign In/Sign Up</a>
-</p>
+<link rel="stylesheet" href="/css/style.css" />
+<div class="wrap">
+  <form class="login-form" action="/users/create">
+    <div class="form-header">
+      <h3>Sign Up Form</h3>
+    </div>
+    <!--Name Input-->
+    <div class="form-group">
+      <input
+        type="name"
+        name="name"
+        placeholder="Name"
+        class="form-input"
+        required
+      />
+    </div>
+    <!--Email Input-->
+    <div class="form-group">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form-input"
+        required
+      />
+    </div>
+    <!--Password Input-->
+    <div class="form-group">
+      <input
+        type="password"
+        name="password"
+        class="form-input"
+        placeholder="Password"
+        required
+      />
+    </div>
+    <!-- Confirm Password Input-->
+    <div class="form-group">
+      <input
+        type="password"
+        name="confirm_password"
+        class="form-input"
+        placeholder="Confirm Password"
+        required
+      />
+    </div>
+    <div
+      class="g-recaptcha form-group"
+      data-sitekey="6Le4S0sjAAAAAC_2tL_Jx2lLFFjQAybuyljOscv5"
+    ></div>
+    <!--Login Button-->
+    <div class="form-group">
+      <button class="form-button" type="submit">Signup</button>
+    </div>
+    <div class="form-footer">
+      Already have an account? <a href="/users/sign-in">Sign In</a><br /><br />
+      <p>
+        <a href="/users/auth/google">Google Sign In/Sign Up</a>
+      </p>
+    </div>
+  </form>
+</div>
+<!--/.wrap-->

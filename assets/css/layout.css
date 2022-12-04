@@ -1,11 +1,13 @@
-html {
-  height: 100%; }
-  html body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  * html {
     height: 100%; }
-    html body #layout-main {
+    * html body {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
       height: 100%; }
+      * html body #layout-main {
+        height: 100%; }

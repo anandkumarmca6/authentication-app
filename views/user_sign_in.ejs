@@ -1,17 +1,44 @@
-<h1>Sign In</h1>
-<form action="/users/create-session" method="post">
-  <input type="email" name="email" placeholder="Email" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <br /><br />
-  <div
-    class="g-recaptcha"
-    style="margin-left: 50px"
-    data-sitekey="6Le4S0sjAAAAAC_2tL_Jx2lLFFjQAybuyljOscv5"
-  ></div>
-  <br />
-  <input type="submit" value="Sign In" />
-</form>
-
-<p>
-  <a href="/users/auth/google">Google Sign In/Sign Up</a>
-</p>
+<link rel="stylesheet" href="/css/style.css" />
+<div class="wrap">
+  <form class="login-form" action="/users/create-session" method="post">
+    <div class="form-header">
+      <h3>Login Form</h3>
+      <p>Login to access your dashboard</p>
+    </div>
+    <!--Email Input-->
+    <div class="form-group">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form-input"
+        required
+      />
+    </div>
+    <!--Password Input-->
+    <div class="form-group">
+      <input
+        type="password"
+        name="password"
+        class="form-input"
+        placeholder="Password"
+        required
+      />
+    </div>
+    <div
+      class="g-recaptcha form-group"
+      data-sitekey="6Le4S0sjAAAAAC_2tL_Jx2lLFFjQAybuyljOscv5"
+    ></div>
+    <!--Login Button-->
+    <div class="form-group">
+      <button class="form-button" type="submit">Login</button>
+    </div>
+    <div class="form-footer">
+      Don't have an account? <a href="/users/sign-up">Sign Up</a><br /><br />
+      <p>
+        <a href="/users/auth/google">Google Sign In/Sign Up</a>
+      </p>
+    </div>
+  </form>
+</div>
+<!--/.wrap-->
