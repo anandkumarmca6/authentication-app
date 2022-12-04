@@ -10,7 +10,7 @@
   "keywords": [
     "social"
   ],
-  "author": "anand",
+  "author": "anand kumar",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
