@@ -37,5 +37,12 @@ https://authentication-app-production.up.railway.app
 - npm install
 - npm start
  # Your project is set up and running!. You can check with url localhost:6564
+ 
+ # To test google authentication
+ - Create project on google developer console.
+ - Replace demo value with clientID,clientSecret and callbackURL respectively in config/environment.js file for object named development
+  clientID: 'demo',
+  clientSecret: 'demo',
+  callbackURL: 'demo',
 
 
