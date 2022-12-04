@@ -37,5 +37,5 @@ https://authentication-app-production.up.railway.app
 - npm install
 - npm start
  # Your project is set up and running!. You can check with url localhost:6564
- # You can create a new employee login or use below:
+
 
