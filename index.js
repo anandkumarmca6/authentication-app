@@ -52,7 +52,7 @@ app.set('views', './views');
 app.use(
   session({
     name: 'authentication',
-    secret: '@1925',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
