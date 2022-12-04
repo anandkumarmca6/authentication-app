@@ -41,8 +41,5 @@ https://authentication-app-production.up.railway.app
  # To test google authentication
  - Create project on google developer console.
  - Replace demo value with clientID,clientSecret and callbackURL respectively in config/environment.js file for object named development
-  clientID: 'demo',
-  clientSecret: 'demo',
-  callbackURL: 'demo',
-
+  
 
