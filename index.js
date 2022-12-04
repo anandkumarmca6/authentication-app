@@ -59,8 +59,8 @@ app.use(
     },
     store: MongoStore.create(
       {
-        // mongoUrl: 'mongodb://localhost',
-        mongoUrl: 'mongodb://localhost',
+        mongoUrl:
+          'mongodb://mongo:oBEyGEf18lih2Gnvjvnw@containers-us-west-144.railway.app:6564',
         dbName: 'authentication',
         stringify: false,
         autoRemove: 'disabled',
