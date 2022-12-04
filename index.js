@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 
 const app = express();
-
-const port = 8000;
+const env = require('./config/environment');
+const port = env.port;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const flash = require('connect-flash');
@@ -22,23 +23,23 @@ const customMware = require('./config/middleware');
 const path = require('path');
 
 // set sass
-
-app.use(
-  sassMiddleware({
-    src: path.join(__dirname, 'assets', 'scss'),
-    dest: path.join(__dirname, 'assets', 'css'),
-    debug: true,
-    outputStyle: 'extended',
-    prefix: '/css',
-  })
-);
-
+if (env.name == 'development') {
+  app.use(
+    sassMiddleware({
+      src: path.join(__dirname, env.asset_path, 'scss'),
+      dest: path.join(__dirname, env.asset_path, 'css'),
+      debug: true,
+      outputStyle: 'extended',
+      prefix: '/css',
+    })
+  );
+}
 // set form encoded
 app.use(express.urlencoded({ extended: true }));
 //set cookie parser
 app.use(cookieParser());
 // set static folder path
-app.use(express.static('assets'));
+app.use(express.static(env.asset_path));
 
 app.use(expressLayouts);
 // extract styles and scripts from sub pages into layout
