@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  'mongodb+srv://authentication:authentication@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority'
+  'mongodb+srv://authentication:authentication@cluster0.fipg6ho.mongodb.net/?retryWrites=true&w=majority'
 );
 const db = mongoose.connection;
 
