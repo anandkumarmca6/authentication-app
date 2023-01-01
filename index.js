@@ -61,7 +61,7 @@ app.use(
     store: MongoStore.create(
       {
         mongoUrl:
-          'mongodb+srv://authentication:authentication@cluster0.cjmdero.mongodb.net/?retryWrites=true&w=majority',
+          'mongodb+srv://authentication:authentication@cluster0.fipg6ho.mongodb.net/?retryWrites=true&w=majority',
         dbName: 'authentication',
         stringify: false,
         autoRemove: 'disabled',
