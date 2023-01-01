@@ -1,5 +1,5 @@
 const User = require('../models/users');
-// Importing isomorphic-fetch package
+
 const fetch = require('isomorphic-fetch');
 // render the sign up page
 module.exports.signUp = function (req, res) {
@@ -36,7 +36,7 @@ module.exports.create = function (req, res) {
     return res.redirect('/users/sign-up');
   }
   // Put secret key here, which we get from google console
-  const secret_key = '6Le4S0sjAAAAAPzQ6f3N1CIkwBSvz-Zzy8yU-1wA';
+  const secret_key = '6LdMH8IjAAAAABtrVD3bonuO6bWtsGpFCZz5j8U9';
 
   // Hitting POST request to the URL, Google will
   // respond with success or error scenario.
